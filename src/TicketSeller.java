@@ -1,6 +1,14 @@
 public class TicketSeller extends User {
 //new Ticket(date, flightNumber, flightHour, capacity, origin, destination);
 
+    private int idnumber;
+
+    public TicketSeller(String username, String password, int idnumber) {
+        this.userName = username;
+        this.password = password;
+        this.idnumber = idnumber;
+    }
+
     public void addThicket(String date, int flightNumber, int flightHour, int capacity, String origin, String destination) {
         for (Ticket ticket : Ticket.tickets) {
             if (ticket.getflightNumber() == flightNumber) {
@@ -28,4 +36,11 @@ public class TicketSeller extends User {
         }
     }
 
+    public int getIdnumber() {
+        return idnumber;
+    }
+
+    public void setIdnumber(int idnumber) {
+        this.idnumber = idnumber;
+    }
 }

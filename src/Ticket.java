@@ -23,6 +23,32 @@ public class Ticket {
         tickets.add(this);
     }
 
+    public static void listOfAllTickets() {
+        for (Ticket thicket : Ticket.tickets) {
+            System.out.println("-------------------------");
+            System.out.println("FlightNumber is: " + thicket.getflightNumber());
+            System.out.println("Origin " + thicket.getOrigin());
+            System.out.println("Destination " + thicket.getDestination());
+            System.out.println("Flight Date " + thicket.getDate());
+            System.out.println("Flight Hour " + thicket.getflightHour());
+            System.out.println("Flight Capacity " + thicket.getRemaindCapacity());
+        }
+    }
+
+    public static void searchInTickets(String origin, String destination, String date) {
+        for (Ticket ticket : Ticket.tickets) {
+            if (ticket.getOrigin().equals(origin) && ticket.getDestination().equals(destination) && ticket.getDate().equals(date) ) {
+                System.out.println("-------------------------");
+                System.out.println("FlightNumber is: " + ticket.getflightNumber());
+                System.out.println("Origin " + ticket.getOrigin());
+                System.out.println("Destination " + ticket.getDestination());
+                System.out.println("Flight Date " + ticket.getDate());
+                System.out.println("Flight Hour " + ticket.getflightHour());
+                System.out.println("Flight Capacity " + ticket.getRemaindCapacity());
+            }
+        }
+    }
+
     public void setPassengers(Customer customer) {
         passengers.add(customer);
     }
