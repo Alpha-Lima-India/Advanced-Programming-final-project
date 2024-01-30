@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="400fb5e3-884b-4197-a048-407747f64848" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/UserManager.java" afterDir="false" />
+    <list default="true" id="400fb5e3-884b-4197-a048-407747f64848" name="Changes" comment="second commit">
+      <change afterPath="$PROJECT_DIR$/listofalltickets.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listofbookedtickets.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listofusers.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
@@ -10,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/src/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ticket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicketSeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicketSeller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,18 +33,22 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2arqGuEW5uCNW825UKkfa9wfxvG" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/HP/Desktop/AP/extra-exercize/src"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -56,7 +63,15 @@
       <workItem from="1706173129992" duration="10962000" />
       <workItem from="1706190567577" duration="11000" />
       <workItem from="1706207870138" duration="836000" />
-      <workItem from="1706244079477" duration="17548000" />
+      <workItem from="1706244079477" duration="17624000" />
+      <workItem from="1706311899759" duration="7000" />
+      <workItem from="1706336645516" duration="9088000" />
+      <workItem from="1706357648775" duration="9162000" />
+      <workItem from="1706417806852" duration="25760000" />
+      <workItem from="1706468898809" duration="471000" />
+      <workItem from="1706508094244" duration="12013000" />
+      <workItem from="1706547043672" duration="1940000" />
+      <workItem from="1706603126118" duration="1515000" />
     </task>
     <task id="LOCAL‎−۰۰۰۰۱" summary="first commit">
       <created>1706190334260</created>
@@ -70,7 +85,13 @@
       <option name="presentableId" value="LOCAL‎−۰۰۰۰۲" />
       <updated>1706190363993</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL‎−۰۰۰۰۳" summary="second commit">
+      <created>1706311829486</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۳" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۳" />
+      <updated>1706311829490</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,7 +109,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
   </component>
 </project>

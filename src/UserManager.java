@@ -1,10 +1,13 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Objects;
 
 public class UserManager {
-    public static ArrayList<User> ListOfAllUsers;
-    private static int[] idnumbers = {1234, 5678, 1256, 4589};
+    public static ArrayList<User> ListOfAllUsers = new ArrayList<>();
+
+    private static final int[] idnumbers = {1234, 5678, 1256, 4589};
+
 
     public static boolean SignUp(String username, String password, String usertype, int idnumber) {
         User newUser = null;
@@ -47,5 +50,24 @@ public class UserManager {
         }
         System.out.println("User not found. ");
         return null;
+    }
+
+    public static User getCostumerByUsername (String username) {
+        for (User user : UserManager.ListOfAllUsers) {
+            if (user instanceof Customer && user.userName.equals(username)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+    public static User getUserByUsername (String username, String password, int idnumber, String firstname, String lastname, String phonenumber) {
+        if (idnumber == 0) {
+            User costumer = new Customer(username, password, firstname, lastname, phonenumber);
+            return costumer;
+        } else {
+            User ticketSeller = new TicketSeller(username, password, idnumber);
+            return ticketSeller;
+        }
     }
 }
