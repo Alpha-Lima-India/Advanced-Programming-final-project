@@ -1,20 +1,13 @@
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 public class Customer extends User{
-//    private String phoneNumber;
+
     private String firstName;
     private String lastName;
     private String phoneNumber;
     public ArrayList<Ticket> BookedThickets = new ArrayList<>();
 
-//    public void setPhoneNumber(String phoneNumber) {
-//        this.phoneNumber = phoneNumber;
-//    }
-//    public String getPhoneNumber() {
-//        return phoneNumber;
-//    }
 
     public Customer(String username, String password) {
         this.password = password;
@@ -31,20 +24,19 @@ public class Customer extends User{
     public void showAllReservedThickets() {
         for (Ticket thicket : BookedThickets) {
             System.out.println("-------------------------------------");
-            System.out.println("FlightNumber is:   " + thicket.getflightNumber());
-            System.out.println("Origin:   " + thicket.getOrigin());
-            System.out.println("Destination:   " + thicket.getDestination());
-            System.out.println("Flight Date:   " + thicket.getDate());
-            System.out.println("Flight Hour:   " + thicket.getflightHour());
-            System.out.println("Flight Capacity:   " + thicket.getRemaindCapacity() + "\n status : Reserved");
+            System.out.println("FlightNumber is:   " + thicket.getFlightNumber());
+            System.out.println("Origin:          " + thicket.getOrigin());
+            System.out.println("Destination:     " + thicket.getDestination());
+            System.out.println("Flight Date:  " + thicket.getDate());
+            System.out.println("Flight Hour:     " + thicket.getFlightHour());
+            System.out.println("Flight Capacity:  " + thicket.getRemaindCapacity() + "\n status : Reserved");
         }
     }
-//if (Ticket.tickets.contains(ticket))
+
     public void purchaseTicket(Ticket ticket) {
         if (this.BookedThickets.contains(ticket)) {
             System.out.println("this ticket is already booked.");
         } else {
-//            ticket.setPassengers(this);
             this.BookedThickets.add(ticket);
             ticket.setRemaindCapacity( ticket.getRemaindCapacity() - 1 );
             System.out.println("ticket booked successfully. ");
@@ -55,8 +47,7 @@ public class Customer extends User{
         boolean confirm = false;
         List<Ticket> copy = new ArrayList<>(this.BookedThickets);
         for (Ticket ticket : copy) {
-            if (ticket.getflightNumber() == flightnum) {
-//                ticket.removePassengers(this);
+            if (ticket.getFlightNumber() == flightnum) {
                 this.BookedThickets.remove(ticket);
                 ticket.setRemaindCapacity( ticket.getRemaindCapacity() + 1 );
                 confirm = true;

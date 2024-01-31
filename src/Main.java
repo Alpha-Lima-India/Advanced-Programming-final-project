@@ -1,6 +1,4 @@
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -55,15 +53,6 @@ public class Main {
             e.printStackTrace();
         }
 
-//        try {
-//            BufferedReader reader2 = new BufferedReader(new FileReader("listofpassengers.txt"));
-//            String line;
-//            while ( (line = reader2.readLine()) != null) {
-//
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("welcome to our airline \n   Please Sign up or if you have signed up already log in now or use 'help' command. ");
@@ -137,7 +126,7 @@ public class Main {
                         int flightnum = scanner.nextInt();
                         boolean confirm = false;
                         for (Ticket ticket : Ticket.tickets) {
-                            if (ticket.getflightNumber() == flightnum) {
+                            if (ticket.getFlightNumber() == flightnum) {
                                 ((Customer) inAppUser).purchaseTicket(ticket);
                                 confirm = true;
                             }
@@ -170,7 +159,7 @@ public class Main {
             // 4. complete the user profile
             else if (command.equals("user profile")) {
                 if (inAppUser instanceof Customer) {
-                    System.out.println("your profile datas are\n " + "FirstName: " +  ((Customer) inAppUser).getFirstName() + "\n LastName: " + ((Customer) inAppUser).getLastName() + "\n PhoneNumber: " + ((Customer) inAppUser).getPhoneNumber());
+                    System.out.println("your profile datas are\n " + "FirstName:     " +  ((Customer) inAppUser).getFirstName() + "\n LastName:    " + ((Customer) inAppUser).getLastName() + "\n PhoneNumber: " + ((Customer) inAppUser).getPhoneNumber());
                     System.out.println("Do you want to edit your profile? Y/N");
                     String command1 = scanner.nextLine().toLowerCase();
                     if (command1.equals("y")) {
@@ -310,7 +299,7 @@ public class Main {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("listofalltickets.txt"));
             for (Ticket ticket : Ticket.tickets) {
-                writer.write( ticket.getDate() + " " + ticket.getflightNumber() + " " + ticket.getflightHour() + " " + ticket.getRemaindCapacity() + " " + ticket.getOrigin() + " " + ticket.getDestination() + "\n");
+                writer.write( ticket.getDate() + " " + ticket.getFlightNumber() + " " + ticket.getFlightHour() + " " + ticket.getRemaindCapacity() + " " + ticket.getOrigin() + " " + ticket.getDestination() + "\n");
             }
             writer.close();
         } catch (IOException e) {
@@ -337,7 +326,7 @@ public class Main {
                 if (user instanceof Customer) {
                     for (Ticket ticket : ((Customer) user).BookedThickets) {
                         if (Ticket.tickets.contains(ticket)) {
-                            writer.write(ticket.getflightNumber() + " ");
+                            writer.write(ticket.getFlightNumber() + " ");
                         }
                     }
                     writer.write(user.userName + "\n");

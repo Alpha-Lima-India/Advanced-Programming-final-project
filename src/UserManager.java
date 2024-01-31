@@ -1,11 +1,8 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Objects;
 
 public class UserManager {
-    public static ArrayList<User> ListOfAllUsers = new ArrayList<>();
 
+    public static ArrayList<User> ListOfAllUsers = new ArrayList<>();
     private static final int[] idnumbers = {1234, 5678, 1256, 4589};
 
 

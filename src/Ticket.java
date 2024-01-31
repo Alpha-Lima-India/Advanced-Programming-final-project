@@ -1,25 +1,22 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-
 
 public class Ticket {
 
-    private String Date;
+    private String date;
     private int flightNumber;
     public static ArrayList<Ticket> tickets = new ArrayList<>();
     private String flightHour;
     private String origin;
     private String destination;
     private int remaindCapacity;
-//    public ArrayList<Customer> passengers = new ArrayList<>();
+
 
 
 
     public Ticket(String date, int flightNumber, String flightHour, int capacity, String origin, String destination) {
-        this.Date = date;
+        this.date = date;
         this.flightHour = flightHour;
         this.remaindCapacity = capacity;
         this.flightNumber = flightNumber;
@@ -29,7 +26,7 @@ public class Ticket {
 
     public static Ticket getTicketByFlightNumber(int flightnum) {
         for (Ticket ticket : Ticket.tickets) {
-            if (ticket.getflightNumber() == flightnum) {
+            if (ticket.getFlightNumber() == flightnum) {
                 return ticket;
             }
         }
@@ -43,12 +40,12 @@ public class Ticket {
         System.out.println(formatted);
         for (Ticket thicket : Ticket.tickets) {
             System.out.println("-------------------------------------");
-            System.out.println("FlightNumber is:   " + thicket.getflightNumber());
-            System.out.println("Origin:   " + thicket.getOrigin());
-            System.out.println("Destination:   " + thicket.getDestination());
-            System.out.println("Flight Date:   " + thicket.getDate());
-            System.out.println("Flight Hour:   " + thicket.getflightHour());
-            System.out.println("Flight Capacity:   " + thicket.getRemaindCapacity());
+            System.out.println("FlightNumber is:   " + thicket.getFlightNumber());
+            System.out.println("Origin:          " + thicket.getOrigin());
+            System.out.println("Destination:     " + thicket.getDestination());
+            System.out.println("Flight Date:  " + thicket.getDate());
+            System.out.println("Flight Hour:     " + thicket.getFlightHour());
+            System.out.println("Flight Capacity:  " + thicket.getRemaindCapacity());
         }
     }
 
@@ -60,31 +57,26 @@ public class Ticket {
         for (Ticket ticket : Ticket.tickets) {
             if (ticket.getOrigin().equals(origin) && ticket.getDestination().equals(destination) && ticket.getDate().equals(date) ) {
                 System.out.println("-------------------------------------");
-                System.out.println("FlightNumber is:   " + ticket.getflightNumber());
-                System.out.println("Origin:   " + ticket.getOrigin());
-                System.out.println("Destination:   " + ticket.getDestination());
-                System.out.println("Flight Date:   " + ticket.getDate());
-                System.out.println("Flight Hour:   " + ticket.getflightHour());
-                System.out.println("Flight Capacity:   " + ticket.getRemaindCapacity());
+                System.out.println("FlightNumber is:   " + ticket.getFlightNumber());
+                System.out.println("Origin:          " + ticket.getOrigin());
+                System.out.println("Destination:     " + ticket.getDestination());
+                System.out.println("Flight Date:  " + ticket.getDate());
+                System.out.println("Flight Hour:     " + ticket.getFlightHour());
+                System.out.println("Flight Capacity:  " + ticket.getRemaindCapacity());
             }
         }
     }
 
-//    public void setPassengers(Customer customer) {
-//        passengers.add(customer);
-//    }
-//    public void removePassengers(Customer customer) {
-//        passengers.remove(customer);
-//    }
+
     public String getDate() {
-        return this.Date;
+        return this.date;
     }
 
-    public int getflightNumber() {
+    public int getFlightNumber() {
         return this.flightNumber;
     }
 
-    public String getflightHour() {
+    public String getFlightHour() {
         return this.flightHour;
     }
 
@@ -99,6 +91,7 @@ public class Ticket {
     public int getRemaindCapacity() {
         return remaindCapacity;
     }
+
     public void setRemaindCapacity(int newCapacity) {
         remaindCapacity = newCapacity;
     }
